@@ -37,7 +37,7 @@ void configure_handler(void)
 	sigaction(SIGILL, &s, NULL);
 }
 
-volatile int psuedo_false=0;
+volatile int pseudo_false=0;
 
 int main(void)
 {
@@ -76,7 +76,7 @@ int main(void)
 	__asm__ ("movl $_bridge, %eax");
 	__asm__ (".byte 0x0f, 0x3f");
 
-	if (psuedo_false) { /* probably a better way to do this */
+	if (pseudo_false) { /* probably a better way to do this */
 		__asm__ ("_bridge:");
 		printf("executed hidden instruction: backdoor detected.\n");
 	}

@@ -1,4 +1,4 @@
-# on make install, install lock_dies and lock_dies.sh
+# on make install, install lock_deis and lock_deis.sh
 
 all:
 	make -C ../lock/
